@@ -3,7 +3,7 @@ FROM alpine:3.3
 ENV TERRAFORM_VERSION 0.8.4
 ENV GLIBC_VERSION 2.23-r3
 
-RUN apk add -Uu add bash tzdata groff less python py-pip wget ca-certificates unzip git bash && \
+RUN apk add -Uu bash tzdata groff less python py-pip wget ca-certificates unzip git bash && \
     wget -q "https://github.com/andyshinn/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-${GLIBC_VERSION}.apk" && \
     apk add --allow-untrusted glibc-${GLIBC_VERSION}.apk && \
     wget -q -O /terraform.zip "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip" && \
