@@ -13,6 +13,10 @@ RUN apk add -Uu add bash tzdata groff less python py-pip wget ca-certificates un
     apk del --purge wget ca-certificates unzip py-pip && \
     rm -rf /var/cache/apk/* /terraform.zip glibc-${GLIBC_VERSION}.apk
 
+RUN adduser -h /var/jenkins_home -s /bin/bash -G nogroup -D -H -u 1000 terraform
+
+USER terraform
+
 ENTRYPOINT ["/bin/terraform"]
 
 CMD ["--help"]
