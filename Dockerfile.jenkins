@@ -17,6 +17,10 @@ RUN adduser -h /var/jenkins_home -s /bin/bash -G nogroup -D -H -u 1000 terraform
 
 USER terraform
 
+VOLUME /data
+
+WORKDIR /data
+
 ENTRYPOINT ["/bin/terraform"]
 
 CMD ["--help"]
