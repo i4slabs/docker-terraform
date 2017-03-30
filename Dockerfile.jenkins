@@ -1,7 +1,7 @@
 FROM alpine:3.5
 
-ENV TERRAFORM_VERSION 0.8.6
-ENV GLIBC_VERSION 2.23-r3
+ENV TERRAFORM_VERSION 0.9.2
+ENV GLIBC_VERSION 2.25-r0
 
 RUN apk add -Uu bash tzdata groff less python py-pip wget ca-certificates unzip git bash && \
     wget -q "https://github.com/andyshinn/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-${GLIBC_VERSION}.apk" && \
