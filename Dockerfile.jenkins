@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-ENV TERRAFORM_VERSION 0.9.2
+ENV TERRAFORM_VERSION 0.9.5
 ENV GLIBC_VERSION 2.25-r0
 
 RUN apk add -Uu bash tzdata groff less python py-pip wget ca-certificates unzip git bash && \
